@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computing and Information Sciences Homepage</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+
+</head>
+<!--body -->
+
+<body class='<%= controller.controller_name %>'>
+	<div id="banner">
+		<%= image_tag("wordmark.png") %>
+		<%= @page_title || "CIS Home" %>
+	</div>
+	<div id="columns">
+		<div id="side">
+			<ul>
+				<li><a href="http://cis.ksu.edu/" target="_blank">KSU CIS Homepage</a></li>
+				<li><a href="https://online.ksu.edu/Axio/UMS/CourseListing" target="_blank">K-State Online</a></li>
+				<li><a href="http://cislinux.cis.ksu.edu:3021/clubs" target="_blank">Change or Add Clubs</a></li>
+				<li><a href="http://www.reddit.com/" target="_blank">Reddit</a></li>
+				<li><a href="https://enewsletters.k-state.edu/cis/" target="_blank">CIS Newsletter</a></li>
+
+				<li><a href="/../calendar">Calendar</a></li>
+			</ul>
+		</div>
+
+<!-- end of addition zdb -->
+
+  <div id="main">
+  <!--div id = "title">
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        signed in as "<strong><%= current_user.username %></strong>", <strong><%= link_to "Logout", destroy_user_session_path %></strong>
+      <% else %>
+        <strong><%= link_to "Sign up", new_user_registration_path %></strong> | <strong><%= link_to "Login", new_user_session_path %></strong>
+      <% end %>
+    </div><br />
+    <h1> <a href="/../">CIS Student Portal</a></h1>
+  </div-->
+
+  <%= yield %>
+
+  </div>
+</body>
+</html>
